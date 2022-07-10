@@ -16,7 +16,8 @@
 
 ## Ransomware Attack Flow
 - They mostly follow APT based attack cycle.
-![phases](Images/human-operated-ransomware.jpg)
+<p align="center"> <img src="images/human-operated-ransomware.jpg"> </p>
+
 [Credit](https://www.helpnetsecurity.com/2020/04/30/ransomware-campaigns/) 
 
 ## Enrich your Logging First-
@@ -90,9 +91,7 @@
   - ```PowerShell Add-MpPreference -ExclusionPath C:```
 
 - Disable Task Manager
-  - ```reg.exe add 
-HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\
-System /v DisableTaskMgr /t REG_DWORD /d 1 /f```
+  - ```reg.exe add HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\ System /v DisableTaskMgr /t REG_DWORD /d 1 /f```
 - Disable/Corrupt Windows Firewall Rules
   - ```netsh ipsec static set policy name=Bastards assign=y```
   - ```netsh firewall set opmode mode=disable```
@@ -114,8 +113,7 @@ System /v DisableTaskMgr /t REG_DWORD /d 1 /f```
   
 - Delete USN journal
   - ```fsutil usn deletejournal /D C:"```
-  - ```wevtutil cl Setup & wevtutil cl System & wevtutil cl Security & wevtutil cl 
-Application & fsutil usn deletejournal /D %c:```
+  - ```wevtutil cl Setup & wevtutil cl System & wevtutil cl Security & wevtutil cl Application & fsutil usn deletejournal /D %c:```
 
 ### Disable Recovery
 
@@ -132,8 +130,7 @@ Application & fsutil usn deletejournal /D %c:```
 - Enforce reboot in safemode
   - ```shutdown /r /f /t 00```
   - ```bcdedit.exe /set safeboot minimal```
-  - ```reg add 
-HKLM\System\CurrentControlSet\Control\SafeBoot\Minimal\HACKER-service```
+  - ```reg add HKLM\System\CurrentControlSet\Control\SafeBoot\Minimal\HACKER-service```
 
 ### Destroy Backups
 
@@ -157,8 +154,7 @@ HKLM\System\CurrentControlSet\Control\SafeBoot\Minimal\HACKER-service```
   - ```wbadmin DELETE SYSTEMSTATEBACKUP -deleteOldest```
   
 - Deleting backups with del
-  - ```del /s /f /q c:*.VHD c:*.bac c:*.bak c:*.wbcat c:*.bkf c:Backup*.* c:ackup*.* 
-c:*.set c:*.win c:*.dsk```
+  - ```del /s /f /q c:*.VHD c:*.bac c:*.bak c:*.wbcat c:*.bkf c:Backup*.* c:ackup*.* c:*.set c:*.win c:*.dsk```
 
 ## Hunting for Emotet
 
