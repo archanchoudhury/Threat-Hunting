@@ -16,7 +16,7 @@
 
 ## Ransomware Attack Flow
 - They mostly follow APT based attack cycle.
-<p align="center"> <img src="images/human-operated-ransomware.jpg"> </p>
+<p align="center"> <img src="../images/human-operated-ransomware.jpg"> </p>
 
 [Credit](https://www.helpnetsecurity.com/2020/04/30/ransomware-campaigns/) 
 
